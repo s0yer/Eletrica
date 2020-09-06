@@ -1,16 +1,18 @@
 # Python 3.7
 # by Jadson Marliere de Oliveira
-# Este projeto tem fins academicos
+# Este projeto possui fins academicos - Disciplina ELETROMAGNETISMO
 
 def valores_fonte_test():
 
 def recebe_valores_usuario():
     qtd_cargas  = input('Digite a quantidade de cargas')
     lista_cargas = []
+    lista_cartesiana = []
     n = 1
     print(' Digite primeiramente a carga de prova :')
     for elem in range(qtd_cargas):
         lista_cargas.append(input('Digite a {} carga'.format(n)))
+        lista_cartesiana.append('digite a posicao espacial da carga no formato: xyz (sem espaco) ex: para p1(5,-3,4) ->5-35')
         n =+ 1
 
     return lista_cargas
