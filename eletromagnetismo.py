@@ -13,7 +13,6 @@ def recebe_valores_usuario():
     qtd_cargas  = input('Digite a quantidade de cargas: ')
     lista_cargas = []
     lista_cartesiana = []
-    lista_r = []
 
     n = 1
     print(' Digite primeiramente a carga de prova :')
@@ -24,7 +23,7 @@ def recebe_valores_usuario():
 
         # recebe coordenadas do espaco:
         lista_posicoes = []
-        print('Se alguma posicoes')
+        print('Adicione apenas as magnitudes de ax + ay + az, espaco(x, y, z): ')
         lista_posicoes.append('digite a posicao no eixo X: ')
         lista_posicoes.append('digite a posicao no eixo Y: ')
         lista_posicoes.append('digite a posicao no eixo Z: ')
@@ -33,24 +32,28 @@ def recebe_valores_usuario():
         lista_cartesiana.append(lista_posicoes)
 
         n =+ 1
-    for in range(qtd_cargas):
-        lis
 
-    return lista_cargas, lista_posicoes
+    return lista_cargas, lista_cartesiana
 
 def calcula_forca_resultante():
-    lista_cargas, lista_posicoes = recebe_valores_usuario()
-
+    lista_cargas, lista_cartesiana = recebe_valores_usuario()
+    lista_r = []
     lista_resposta = []
+
     # constante de permissividade
     e_const = 8.854 * pow(10, -12)
     k = 1 / (4 * 3.1415 * e_const)
 
-    r12 =
+    for sub_list in range(len(lista_posicoes)-1):
+        lista_r.append((lista_cartesiana[n] - lista_cartesiana[n+1]))
 
-    ans = 'Forca Resultante: {.2e} + {.2e} + {.2e} (N)'lista_resposta[]
+
+    ans = 'Forca Resultante: {.2e} + {.2e} + {.2e} (N)'.format(lista_resposta)
+    print(ans)
+
+    return ans
+
 def calcula_campo_eletrico():
-
 
 
 def main_screen():
