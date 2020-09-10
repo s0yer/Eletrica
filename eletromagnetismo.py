@@ -12,6 +12,11 @@ def valores_fonte_test():
     posicoes_q2 = [2, -3, 5]
     posicoes_q3 = [-2, 5, 8]
 
+    lista_cargas = [q1, q2, q3]
+    lista_posicoes = [posicoes_q1, posicoes_q2, posicoes_q3]
+
+    return lista_cargas, lista_posicoes
+
 def calcula_modulo(posicoes):
     modulo_posicoes = pow((pow(posicoes[0], 2) + pow(posicoes[1], 2) + pow(posicoes[2], 2)), 1/2)
 
@@ -39,12 +44,12 @@ def recebe_valores_usuario():
         # adicona coodenadas no array de posicoes
         lista_cartesiana.append(lista_posicoes)
 
-        n =+ 1
+        n += 1
 
     return lista_cargas, lista_cartesiana
 
 def calcula_forca_resultante():
-    lista_cargas, lista_cartesiana = recebe_valores_usuario()
+    lista_cargas, lista_cartesiana = valores_fonte_test()
     lista_r = []
     lista_resposta = []
 
@@ -52,16 +57,26 @@ def calcula_forca_resultante():
     e_const = 8.854 * pow(10, -12)
     k = 1 / (4 * 3.1415 * e_const)
 
-    for sub_list in range(len(lista_posicoes)-1):
-        lista_r.append((lista_cartesiana[n] - lista_cartesiana[n+1]))
+    # faz o subcalculo de r
+    n = 1
+    for sub_list in range(len(lista_cartesiana)-1):
+        lista_r.append((lista_cartesiana[0] - lista_cartesiana[n]))
+        n += 1
 
-
+    print(lista_r)
     ans = 'Forca Resultante: {.2e} + {.2e} + {.2e} (N)'.format(lista_resposta)
     print(ans)
 
     return ans
 
-def calcula_campo_eletrico():
+
+# def calcula_campo_eletrico():
 
 
 def main_screen():
+
+    print('1 - Calculo F Resultante: ')
+
+
+main_screen()
+calcula_forca_resultante()
