@@ -3,6 +3,14 @@
 # Este projeto possui fins academicos - Disciplina ELETROMAGNETISMO
 
 def valores_fonte_test():
+    # As cargas devem estar em notacao cientifica
+    q1 = 10 * pow(10, -9)
+    q2 = 2 * pow(10, -9)
+    q3 = 3 * pow(10, -9)
+
+    posicoes_q1 = [2, 2, 8]
+    posicoes_q2 = [2, -3, 5]
+    posicoes_q3 = [-2, 5, 8]
 
 def calcula_modulo(posicoes):
     modulo_posicoes = pow((pow(posicoes[0], 2) + pow(posicoes[1], 2) + pow(posicoes[2], 2)), 1/2)
