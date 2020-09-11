@@ -2,6 +2,9 @@
 # by Jadson Marliere de Oliveira
 # Este projeto possui fins academicos - Disciplina ELETROMAGNETISMO
 
+# precisa de instalar o pacote numpy
+import numpy as np
+
 def valores_fonte_test():
     # As cargas devem estar em notacao cientifica
     q1 = 10 * pow(10, -9)
@@ -12,8 +15,8 @@ def valores_fonte_test():
     posicoes_q2 = [2, -3, 5]
     posicoes_q3 = [-2, 5, 8]
 
-    lista_cargas = [q1, q2, q3]
-    lista_posicoes = [posicoes_q1, posicoes_q2, posicoes_q3]
+    lista_cargas = np.array([q1, q2, q3])
+    lista_posicoes = np.array([posicoes_q1, posicoes_q2, posicoes_q3])
 
     return lista_cargas, lista_posicoes
 
